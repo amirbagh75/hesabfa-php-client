@@ -1,13 +1,14 @@
 <?php
 
-
 namespace Amirbagh75\HesabfaClient\Contracts;
 
 interface HesabfaClientInterface
 {
     // Contacts - docs: https://www.hesabfa.com/help/api/Contact
     public function getContact(string $contactCode);
+
     public function getContactsList(array $queryInfo);
+
     public function getContactsByID(array $contactsID);
 
     // Invoices - docs: https://www.hesabfa.com/help/api/Invoice
