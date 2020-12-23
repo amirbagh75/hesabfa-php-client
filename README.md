@@ -1,6 +1,6 @@
 ## Unofficial PHP Package for hesabfa.com
 
-This package makes it easier for php programmers to use the Hesabfa API.
+This package makes it easier for php & laravel programmers to use the Hesabfa API.
 
 ### How to install:
 ```
