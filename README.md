@@ -4,6 +4,10 @@
 
 This package makes it easier for php & laravel programmers to use the Hesabfa API.
 
+<div dir='rtl'>
+اگر نیازمند ارتباط با API حسابفا در PHP هستید، این پکیج کار شما رو راحت‌تر خواهد کرد.
+</div>
+
 ### How to install:
 ```
 composer require amirbagh75/hesabfa-client
