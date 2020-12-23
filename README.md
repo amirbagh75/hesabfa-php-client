@@ -4,7 +4,7 @@ This package makes it easier for php programmers to use the Hesabfa API.
 
 ### How to install:
 ```
-composer require amirbagh75`/hesabfa-client
+composer require amirbagh75/hesabfa-client
 ```
 
 ### Example
