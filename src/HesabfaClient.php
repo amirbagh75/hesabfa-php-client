@@ -10,9 +10,8 @@ use Amirbagh75\HesabfaClient\Contracts\HesabfaClientInterface;
 
 class HesabfaClient implements HesabfaClientInterface
 {
-    private array $requestBody;
-    private object $results;
-    private Client $client;
+    private $requestBody;
+    private $client;
 
     /**
      * Create a new HesabfaClient Instance
@@ -35,24 +34,17 @@ class HesabfaClient implements HesabfaClientInterface
     }
 
     /**
-     * @param  string  $route
+     * @param string $route
+     * @return object
      * @throws GuzzleException
      */
-    private function executeRequest(string $route)
+    private function executeRequest(string $route): object
     {
         $response = $this->client->request('POST', $route, [
             'protocols' => ['https'],
             'json' => $this->requestBody,
         ]);
-        $this->results = json_decode((string)$response->getBody());
-    }
-
-    /**
-     * @return object
-     */
-    private function showResult()
-    {
-        return $this->results;
+        return json_decode((string)$response->getBody());
     }
 
     /**
@@ -63,8 +55,7 @@ class HesabfaClient implements HesabfaClientInterface
     public function getContact(string $contactCode): object
     {
         $this->requestBody['code'] = $contactCode;
-        $this->executeRequest('contact/get');
-        return $this->showResult();
+        return $this->executeRequest('contact/get');
     }
 
     /**
@@ -75,8 +66,7 @@ class HesabfaClient implements HesabfaClientInterface
     public function getContactsList(array $queryInfo): object
     {
         $this->requestBody['queryInfo'] = $queryInfo;
-        $this->executeRequest('contact/getcontacts');
-        return $this->showResult();
+        return $this->executeRequest('contact/getcontacts');
     }
 
     /**
@@ -87,8 +77,7 @@ class HesabfaClient implements HesabfaClientInterface
     public function getContactsByID(array $contactsID): object
     {
         $this->requestBody['idList'] = $contactsID;
-        $this->executeRequest('contact/getById');
-        return $this->showResult();
+        return $this->executeRequest('contact/getById');
     }
 
     /**
@@ -97,11 +86,34 @@ class HesabfaClient implements HesabfaClientInterface
      * @return object
      * @throws GuzzleException
      */
-    public function getInvoices(string $invoiceType, array $queryInfo): object
+    public function getInvoices(string $invoiceType, array $queryInfo = []): object
     {
         $this->requestBody['type'] = $invoiceType;
         $this->requestBody['queryInfo'] = $queryInfo;
-        $this->executeRequest('invoice/getinvoices');
-        return $this->showResult();
+        return$this->executeRequest('invoice/getinvoices');
+    }
+
+    /**
+     * @param string $url
+     * @param string $hookPassword
+     * @return object
+     * @throws GuzzleException
+     */
+    public function setWebHook(string $url, string $hookPassword): object
+    {
+        $this->requestBody['url'] = $url;
+        $this->requestBody['hookPassword'] = $hookPassword;
+        return $this->executeRequest('setting/SetChangeHook');
+    }
+
+    /**
+     * @param array $idList
+     * @return object
+     * @throws GuzzleException
+     */
+    public function getItemByID(array $idList): object
+    {
+        $this->requestBody['idList'] = $idList;
+        return $this->executeRequest('item/getById');
     }
 }
