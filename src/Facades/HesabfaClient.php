@@ -1,6 +1,6 @@
 <?php
 
-namespace Amirbagh75\SMSIR\Facades;
+namespace Amirbagh75\HesabfaClient\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
