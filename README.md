@@ -42,9 +42,9 @@ try {
 First add these environment variables in your .env file:
 
 ```
-SMSIR_API_KEY="xxxx"
-SMSIR_SECRET_KEY="xxxx"
-SMSIR_LINE_NUMBER="xxxx"
+HESABFA_USER_ID="xxxx"
+HESABFA_USER_PASSWORD="xxxx"
+HESABFA_API_KEY="xxxx"
 ```
 Then use it like the following example:
 
