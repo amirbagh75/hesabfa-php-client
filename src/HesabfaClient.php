@@ -72,7 +72,7 @@ class HesabfaClient implements HesabfaClientInterface
      *
      * @return object
      */
-    public function getContactsList(array $queryInfo): object
+    public function getContactsList(array $queryInfo = []): object
     {
         $this->requestBody['queryInfo'] = $queryInfo;
 

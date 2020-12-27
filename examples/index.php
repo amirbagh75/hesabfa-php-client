@@ -12,12 +12,7 @@ $apiKey = getenv('API_KEY');
 $hesabfa = new HesabfaClient($userID, $userPassword, $apiKey);
 
 try {
-    $res = $hesabfa->getInvoices(1, [
-        'SortBy'   => 'Date',
-        'SortDesc' => true,
-        'Take'     => 1,
-        'Skip'     => 0,
-    ]);
+    $res = $hesabfa->getContactsList();
     print_r($res);
 } catch (GuzzleException $e) {
     print_r('Problem happened: '.$e->getMessage());
