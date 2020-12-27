@@ -1,6 +1,12 @@
+[![StyleCI](https://github.styleci.io/repos/304955372/shield?branch=main)](https://github.styleci.io/repos/304955372?branch=main) [![Latest Stable Version](https://poser.pugx.org/amirbagh75/hesabfa-client/v)](//packagist.org/packages/amirbagh75/hesabfa-client) [![Total Downloads](https://poser.pugx.org/amirbagh75/hesabfa-client/downloads)](//packagist.org/packages/amirbagh75/hesabfa-client) [![License](https://poser.pugx.org/amirbagh75/hesabfa-client/license)](//packagist.org/packages/amirbagh75/hesabfa-client)
+
 ## Unofficial PHP Package for hesabfa.com
 
-This package makes it easier for php programmers to use the Hesabfa API.
+This package makes it easier for php & laravel programmers to use the Hesabfa API.
+
+<div dir='rtl'>
+اگر نیازمند ارتباط با API حسابفا در PHP هستید، این پکیج کار شما رو راحت‌تر خواهد کرد.
+</div>
 
 ### How to install:
 ```
