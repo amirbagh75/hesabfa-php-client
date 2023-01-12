@@ -1,18 +1,18 @@
 {
-    "name": "amirbagh75/hesabfa-client",
+    "name": "ohmydevops/hesabfa-client",
     "type": "library",
     "description": "A simple PHP package for hesabfa API",
     "keywords": [
-        "amirbagh75",
+        "ohmydevops",
         "HesabfaClient"
     ],
-    "homepage": "https://github.com/amirbagh75/hesabfa-php-client",
+    "homepage": "https://github.com/ohmydevops/hesabfa-php-client",
     "license": "MIT",
     "authors": [
         {
             "name": "Amirhossein Baghaie",
-            "email": "amirbagh75@gmail.com",
-            "homepage": "https://amirbagh75.ir",
+            "email": "ohmydevops@gmail.com",
+            "homepage": "https://ohmydevops.me",
             "role": "Developer"
         }
     ],
